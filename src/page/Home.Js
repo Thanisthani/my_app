@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 
 // Get user information from backend - API 
@@ -41,7 +42,9 @@ function Home() {
               <td>{val.contact}</td>
               <td >
               
-              <button className='btn btn-Edit'>Edit</button>
+              <Link to={`/edit/${val.ID}`}>
+                  <button className='btn btn-Edit'>Edit</button>
+                  </Link>
               <button className='btn btn-Delete'>Delete</button>
               <button className='btn btn-View'>View</button>
 
